@@ -34,7 +34,7 @@ def baixar_video():
 
 janela = tk.Tk()
 janela.title("YouTube Downloader")
-janela.geometry("400x150")
+janela.geometry("400x170")
 
 tk.Label(janela, text="URL do vídeo do YouTube:").pack(pady=10)
 
@@ -42,9 +42,10 @@ entrada_url = tk.Entry(janela, width=50)
 entrada_url.pack()
 
 tk.Button(janela, text="Baixar", command=baixar_video).pack(pady=10)
-tk.Button(janela, text="Cancelar", command=janela.destroy).pack(pady=10)
 
 status = tk.StringVar()
 tk.Label(janela, textvariable=status).pack()
+
+tk.Button(janela, text="Cancelar", command=janela.destroy).pack(pady=10)
 
 janela.mainloop()
